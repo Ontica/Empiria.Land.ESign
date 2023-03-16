@@ -17,6 +17,8 @@ import { MainLayoutModule } from './main-layout/main-layout.module';
 
 import { AppRoutingModule } from './app-routing.module';
 
+import { EsignModule } from './views/esign/esign.module';
+
 import { AppComponent } from './app.component';
 
 
@@ -34,6 +36,8 @@ import { AppComponent } from './app.component';
 
     CoreModule,
     MainLayoutModule,
+
+    EsignModule,
 
     AppRoutingModule
   ],

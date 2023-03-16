@@ -2,15 +2,39 @@
 
   <div class="primary">
 
-    <emp-ng-card
-      title=""
-      hint="Seleccionar una opción."
-      [showCardHeaderFlat]="true"
-      [disableClose]="true">
+    <div class="card card-border">
 
+      <div class="card-header card-header-flat">
+
+        <div class="card-title">
+           Trámites pendientes para su firma
+        </div>
+
+        <div class="card-header-options">         
+            <button class="btn-action" fxFlexOffset="1.5rem">
+            Firmar
+            </button>      
+        </div>
+
+    </div>
+
+    
        
-    </emp-ng-card>
+       <div class="scrollable-container mat-elevation-z1">
 
+        <emp-esign-grid></emp-esign-grid>
+        
+         
+
+    </div>
   </div>
 
+  </div>
+   <!-- 
+  <div class="secondary">
+
+   
+
+</div>
+-->
 </div>

@@ -7,41 +7,30 @@
 
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AngularMaterialModule } from '@app/shared/angular-material.module';
 import { AngularFlexLayoutModule } from '@app/shared/angular-flex-layout.module';
 import { SharedModule } from '@app/shared/shared.module';
 
-import { SystemManagementWorkspaceRoutingModule } from './system-management-workspace-routing.module';
 
-import { ControlPanelMainPageComponent } from './control-panel-main-page.component';
-import { EsignModule } from '@app/views/esign/esign.module';
+import { EmpEsignGridComponent } from './emp-esign-grid.component';
 
 
 
 @NgModule({
-
+  declarations: [EmpEsignGridComponent],
   imports: [
     CommonModule,
-    FormsModule,
     ReactiveFormsModule,
 
     AngularMaterialModule,
     AngularFlexLayoutModule,
     SharedModule,
-    EsignModule,
-
-    SystemManagementWorkspaceRoutingModule,
+    
   ],
-
-  declarations: [
-    ControlPanelMainPageComponent,
-  ],
-
-  exports: [
-
-  ],
-
+  exports: [ 
+    EmpEsignGridComponent
+  ]
 })
-export class SystemManagementWorkspaceModule { }
+export class EsignModule { }
