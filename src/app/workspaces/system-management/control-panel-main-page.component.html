@@ -22,19 +22,18 @@
        
        <div class="scrollable-container mat-elevation-z1">
 
-        <emp-esign-grid></emp-esign-grid>
-        
-         
+        <emp-esign-grid (documentSelectedEvent)="onSelectedDocumentEvent($event)"></emp-esign-grid >
+                  
 
     </div>
   </div>
 
   </div>
-   <!-- 
-  <div class="secondary">
-
    
+  <div class="secondary" *ngIf="isDocumentViewerVisble">
+   
+    <emp-esign-document-viewer [request]="document" (onCloseWindow)="onCloseDocumentViewer()"></emp-esign-document-viewer>
 
 </div>
--->
+
 </div>

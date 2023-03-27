@@ -15,11 +15,13 @@ import { SharedModule } from '@app/shared/shared.module';
 
 
 import { EmpEsignGridComponent } from './emp-esign-grid.component';
+import { DocumentViewerComponent } from './document-viewer/document-viewer.component';
 
 
+import { SecureUrlPipe } from '@app/core/pipes/secure-url.pipe';
 
 @NgModule({
-  declarations: [EmpEsignGridComponent],
+  declarations: [EmpEsignGridComponent, DocumentViewerComponent, SecureUrlPipe],
   imports: [
     CommonModule,
     ReactiveFormsModule,
@@ -30,7 +32,8 @@ import { EmpEsignGridComponent } from './emp-esign-grid.component';
     
   ],
   exports: [ 
-    EmpEsignGridComponent
+    EmpEsignGridComponent,
+    DocumentViewerComponent
   ]
 })
 export class EsignModule { }

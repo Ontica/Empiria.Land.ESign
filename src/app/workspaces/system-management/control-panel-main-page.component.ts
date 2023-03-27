@@ -11,6 +11,7 @@ import { MessageBoxService } from '@app/shared/containers/message-box';
 
 import { ControlPanelOption, ControlPanelOptionList } from './control-panel-config';
 
+import { Document, DOCUMENTS, EmptyDocument } from '../../models/signRequest';
 
 @Component({
   selector: 'emp-ng-control-panel-main-page',
@@ -18,7 +19,19 @@ import { ControlPanelOption, ControlPanelOptionList } from './control-panel-conf
 })
 export class ControlPanelMainPageComponent {
 
+  isDocumentViewerVisble = false;
+  document = EmptyDocument;
 
   constructor(private messageBox: MessageBoxService) {}
+
+  onSelectedDocumentEvent(document: Document) {    
+    this.document = document;
+
+    this.isDocumentViewerVisble = true;
+  }
+
+  onCloseDocumentViewer() {
+    this.isDocumentViewerVisble = false;
+  }
 
 }

@@ -1,0 +1,10 @@
+<emp-ng-card 
+    [title]= 'title'
+    [hint]='info'
+    (cardClose)="onCloseDocumentViewer()">
+    
+   <div class="card-header-flat"></div> 
+
+    <object  style = "height: 95%; width: 100%;" [data]="documentURI | secureUrl"></object> 
+
+</emp-ng-card>
